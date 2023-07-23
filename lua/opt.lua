@@ -1,4 +1,4 @@
-vim.o.timeoutlen = 2000
+vim.o.timeoutlen = 4000
 
 vim.o.equalalways = false
 vim.o.background = dark

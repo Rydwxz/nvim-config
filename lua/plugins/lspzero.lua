@@ -50,6 +50,7 @@ return {
 				'powershell_es',
 				'pyre',
 				'reason_ls',
+				'rust_analyzer',
 			},
 		})
 

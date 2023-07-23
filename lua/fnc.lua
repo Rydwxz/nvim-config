@@ -15,27 +15,31 @@ local M = {}
 	  lightgray    = '#504945',
 	  inactivegray = '#7c6f64',
 	  orange       = '#FFAF00',
-	  red          = '#5F0000',
+	  red          = '#b32727',
 	  brightorange = '#C08A20',
-	  brightred    = '#AF0000',
+	  brightred    = '#d22424',
 	  cyan         = '#00DFFF',
+		noen = '#ad0925',
+		dark = '#000000',
 	}
 
 M.statusline_theme = {
 	normal = {
 		 a = { bg = colors.neon, fg = colors.black, gui = 'bold' },
-		 b = { bg = colors.gray, fg = colors.white },
-		 c = { bg = colors.black, fg = colors.brightgreen },
+		 b = { bg = colors.noen, fg = colors.white },
+		 c = { bg = colors.black, fg = colors.red },
 	  },
 	  insert = {
-		 a = { bg = colors.blue, fg = colors.darkblue, gui = 'bold' },
-		 b = { bg = colors.navyblue, fg = colors.white },
-		 c = { bg = colors.purple, fg = colors.white },
+		 a = { bg = colors.white, fg = colors.dark, gui = 'bold' },
+		 b = { bg = colors.dark, fg = colors.white },
+		 c = { bg = colors.brightred, fg = colors.black },
+		 z = { bg = colors.white, fg = colors.dark},
 	  },
 	  visual = {
-		 a = { bg = colors.orange, fg = colors.black, gui = 'bold' },
-		 b = { bg = colors.darkgray, fg = colors.white },
-		 c = { bg = colors.red, fg = colors.white },
+		 a = { bg = colors.green, fg = colors.black, gui = 'bold' },
+		 b = { bg = colors.blue, fg = colors.black },
+		 c = { bg = colors.black, fg = colors.white },
+		 z = { bg = colors.green, fg = colors.dark},
 	  },
 	  replace = {
 		 a = { bg = colors.brightred, fg = colors.white, gui = 'bold' },
@@ -43,14 +47,14 @@ M.statusline_theme = {
 		 c = { bg = colors.navyblue, fg = colors.white },
 	  },
 	  command = {
-		 a = { bg = colors.green, fg = colors.black, gui = 'bold' },
-		 b = { bg = colors.darkgray, fg = colors.white },
-		 c = { bg = colors.black, fg = colors.brightgreen },
+		 a = { bg = colors.purple, fg = colors.brightgreen, gui = 'bold' },
+		 b = { bg = colors.dark, fg = colors.darkgray },
+		 c = { bg = colors.dark, fg = colors.dark },
 	  },
 	  inactive = {
-		 a = { bg = colors.darkgray, fg = colors.gray, gui = 'bold' },
-		 b = { bg = colors.darkgray, fg = colors.gray },
-		 c = { bg = colors.darkgray, fg = colors.gray },
+		 a = { bg = colors.darkgray, fg = colors.black, gui = 'bold' },
+		 b = { bg = colors.darkgray, fg = colors.black },
+		 c = { bg = colors.darkgray, fg = colors.black },
 	  },
 }
 

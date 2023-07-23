@@ -6,7 +6,7 @@ return {
       hijack_unnamed_buffer_when_opening = true,
       sort_by = 'type',
       view = {
-		   width = 24,
+		   width = 32,
 			relativenumber = true,
       },
 		renderer = {

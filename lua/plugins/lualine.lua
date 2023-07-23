@@ -8,7 +8,7 @@ return {
 		},
 		sections = {
 			lualine_a = {'mode'},
-			lualine_b = {'branch'},
+			lualine_b = {'filename'},
 			lualine_c = {function ()
 				return require('nvim-navic').get_location()
 			end},
@@ -17,7 +17,7 @@ return {
 				return require('lsp-progress').progress()
 			end},
 			lualine_y = {'progress', 'filesize'},
-			lualine_z = {'diff', 'diagnostics'},
+			lualine_z = {'branch', 'diagnostics'},
 		},
 		inactive_sections = {
 			lualine_x = {'filetype'},

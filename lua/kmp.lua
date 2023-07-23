@@ -1,15 +1,18 @@
-local kym = function(a,b,c)
-	vim.keymap.set(a,b,c)
-end
+local kym = function(a,b,c) vim.keymap.set(a,b,c) end
+--color picker
+kym('n', '<leader>4', '<cmd>CccPick<cr>')
+--
 --cmp mapping declared in lspzero.lua for reasons
-
+--
 --barbar
 kym('n', '<leader>,', '<Cmd>BufferPrevious<CR>')
 kym('n', '<leader>.', '<Cmd>BufferNext<CR>')
 kym('n', '<leader>.', '<Cmd>BufferNext<CR>')
 kym('n', '<leader>t', '<Cmd>BufferPick<CR>')
 kym('n', '<a-t>', '<Cmd>BufferClose<CR>')
-
+--
+--flash map in flash.lua for laziness
+--
 --codewindow
 kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
 kym('n', '<leader>mf', function() require('codewindow').toggle_focus() end )
@@ -27,7 +30,6 @@ kym('n', '<leader>fd', function() require('telescope.builtin').lsp_definitions(i
 kym('n', '<leader>fi', function() require('telescope.builtin').lsp_implementation(ivy) end )
 kym('n', '<leader>fq', function() require('telescope.builtin').quickfix(ivy) end )
 
-
 --tree
 kym('n', '<leader>r', '<cmd>NvimTreeToggle<cr>')
 
@@ -39,6 +41,8 @@ require('neoscroll.config').set_mappings(sm)
 
 --spider
 kym({"n"}, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
+kym({"o","v",'x'}, "f", function ()require('spider').motion('w') end, {remap=true} )
+kym({"o",'v','x'}, "F", function ()require('spider').motion('w') end,{remap=true, skipInsignificantPunctuation = false} )
 kym({"n"}, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
 kym({"n"}, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
 kym({"n"}, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })

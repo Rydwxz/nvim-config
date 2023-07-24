@@ -1,5 +1,7 @@
 return {
 
+	{
+
 	'nvim-treesitter/nvim-treesitter',
 	config = function()
 		require('nvim-treesitter.configs').setup({
@@ -19,7 +21,16 @@ return {
 			highlight = {enable = true},
 			indent = {enable = true},
 			incremental_selection = {enable = true},
+			playground = {
+				enable = true,
+			},
 		})
 	end,
 
+	},
+
+	{
+		'nvim-treesitter/playground',
+		dependencies = 'nvim-treesitter/nvim-treesitter',
+	},
 }

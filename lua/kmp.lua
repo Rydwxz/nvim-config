@@ -17,6 +17,10 @@ kym('n', '<a-t>', '<Cmd>BufferClose<CR>')
 kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
 kym('n', '<leader>mf', function() require('codewindow').toggle_focus() end )
 
+--playground
+kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
+kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')
+
 --telescope
 local ivy = require('telescope.themes').get_ivy()
 kym('n', '<leader>ff', function() require('telescope.builtin').find_files(ivy) end )

@@ -4,7 +4,7 @@ return {
 	opts = {
 		options = {
 			theme = require('fnc').statusline_theme,
-			component_separators = {right = '|'},
+			component_separators = {right = ''},
 		},
 		sections = {
 			lualine_a = {'mode'},
@@ -43,6 +43,11 @@ return {
 	dependencies = {
 		'SmiteshP/nvim-navic',
 		'linrongbin16/lsp-progress.nvim',
+	},
+	extensions = {
+		'fugitive',
+		'lazy',
+		'man',
 	},
 
 }

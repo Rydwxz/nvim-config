@@ -1,7 +1,6 @@
 return {
 
    'nvim-tree/nvim-tree.lua',
-	enabled = false,
    opts = {
 		disable_netrw = true,
 		hijack_unnamed_buffer_when_opening = true,

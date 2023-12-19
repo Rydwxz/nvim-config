@@ -19,6 +19,7 @@ return {
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
+	    {'ray-x/lsp_signature.nvim'},
 		{'SmiteshP/nvim-navic'},
 		{'neovim/nvim-lspconfig'},             -- Required
 		{                                      -- Optional
@@ -71,8 +72,10 @@ return {
 
 		local lsp = require('lsp-zero').preset({'recommended'})
 		local navic = require('nvim-navic')
+		local sig = require('lsp_signature').setup()
 		lsp.on_attach(function(client, bufnr)
 			navic.attach(client, bufnr)
+			require('lsp_signature').on_attach(sig, bufnr)
 			lsp.default_keymaps({buffer = bufnr })
 		end)
 		lsp.setup()
@@ -90,17 +93,6 @@ return {
 				['<tab>'] = function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
-						cmp.select_next_item()
-						cmp.confirm()
-					else
-						fallback()
-					end
-				end,
-				['<c-tab>'] = function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-						cmp.select_next_item()
-						cmp.select_next_item()
 						cmp.confirm()
 					else
 						fallback()
@@ -109,6 +101,14 @@ return {
 				['<a-tab>'] = function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
+						cmp.select_next_item()
+						cmp.confirm()
+					else
+						fallback()
+					end
+				end,
+				['<c-tab>'] = function(fallback)
+					if cmp.visible() then
 						cmp.select_next_item()
 						cmp.select_next_item()
 						cmp.select_next_item()

@@ -29,7 +29,7 @@ local statusline_theme = {
 	  },
 	  insert = {
 		 a = { bg = colors.white, fg = colors.dark, gui = 'bold' },
-		 b = { bg = colors.dark, fg = colors.white },
+		 b = { bg = colors.dark, fg = colors.brightgreen },
 		 c = { bg = colors.brightred, fg = colors.black },
 		 z = { bg = colors.white, fg = colors.dark},
 	  },
@@ -45,7 +45,7 @@ local statusline_theme = {
 		 c = { bg = colors.navyblue, fg = colors.white },
 	  },
 	  command = {
-		 a = { bg = colors.purple, fg = colors.brightgreen, gui = 'bold' },
+		 a = { bg = colors.purple, fg = colors.brightred, gui = 'bold' },
 		 b = { bg = colors.dark, fg = colors.darkgray },
 		 c = { bg = colors.dark, fg = colors.dark },
 	  },
@@ -71,7 +71,9 @@ return {
 			end},
 
 			lualine_x = { function()
-				return require('lsp-progress').progress()
+				if not pcall(require, 'lsp_signature') then return end
+				local sig = require('lsp_signature').status_line()
+				return sig.label
 			end},
 			lualine_y = {'progress', 'filesize'},
 			lualine_z = {
@@ -98,6 +100,7 @@ return {
 		},
 	},
 	dependencies = {
+	    'ray-x/lsp_signature.nvim',
 		'SmiteshP/nvim-navic',
 		'linrongbin16/lsp-progress.nvim',
 	},

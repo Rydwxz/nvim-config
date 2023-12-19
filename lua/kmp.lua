@@ -17,6 +17,9 @@ kym('n', '<a-t>', '<Cmd>BufferClose<CR>')
 kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
 kym('n', '<leader>mf', function() require('codewindow').toggle_focus() end )
 
+--numberline
+kym('n', '<leader>nn', function () require('fnc').numbertoggle() end)
+
 --playground
 kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
 kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')

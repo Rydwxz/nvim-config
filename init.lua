@@ -17,5 +17,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
-vim.cmd('colorscheme carbonfox')
+vim.cmd('colorscheme rose-pine')
 require('kmp')

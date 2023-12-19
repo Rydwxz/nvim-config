@@ -6,10 +6,12 @@ return {
 
 	{'Rydwxz/bhs'},
 
+	{'projekt0n/caret.nvim'},
 	{'challenger-deep-theme/vim'},
 	{'Everblush/nvim', name = 'everblush'},
     {'EdenEast/nightfox.nvim'},
-	{'rose-pine/neovim', name = 'rose-pine'},
+	--{'rose-pine/neovim', name = 'rose-pine'},
+	{ dir = '~/.config/nvim/lua/plugins/rosepine/'},
 	{'LunarVim/horizon.nvim', name = 'horizon'},
 	{'nyoom-engineering/oxocarbon.nvim'},
 	{'Mofiqul/vscode.nvim'},

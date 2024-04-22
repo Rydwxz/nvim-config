@@ -44,6 +44,7 @@
   "playground": { "branch": "master", "commit": "ba48c6a62a280eefb7c85725b0915e021a1a0749" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "7ef0766b5cd2f5cdf4fcb08886f0a2ebf65981fa" },
+  "rose-pine": { "branch": "main", "commit": "17b466e79479758b332a3cac12544a3ad2be6241" },
   "rust-tools.nvim": { "branch": "master", "commit": "676187908a1ce35ffcd727c654ed68d851299d3e" },
   "seoul256.vim": { "branch": "master", "commit": "b21c9e63f7c2d543db8b34a393a0b42ec7e9b891" },
   "sonokai": { "branch": "master", "commit": "da162343354fbd9bf9cd49293a856f0e3761e8ac" },

@@ -4,7 +4,7 @@ return {
    opts = {
 		disable_netrw = true,
 		hijack_unnamed_buffer_when_opening = true,
-		sort_by = 'type',
+		sort_by = 'filetype',
 		view = {
 			width = 32,
 			relativenumber = true,

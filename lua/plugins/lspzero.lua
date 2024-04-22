@@ -41,32 +41,17 @@ return {
 		require('mason').setup()
 		require('mason-lspconfig').setup({
 			ensure_installed = {
-				'arduino_language_server',
-				'asm_lsp',
                 'bashls',
 				'clangd',
 				'cmake',
-                'cssls',
-                'dockerls',
-                'fennel_language_server',
-				'gopls',
-				'hls',
                 'jsonls',
                 'lemminx', --xml
 				'lua_ls',
 				'marksman',
-                'matlab_ls',
-				'powershell_es',
 				'pyre',
-                'quick_lint_js',
-				'reason_ls',
                 'sorbet', --ruby
-                'sqlls',
-                'taplo',
-                'tsserver',
                 'vimls',
                 'yamlls',
-                'zls',
 			},
 		})
 

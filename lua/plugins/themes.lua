@@ -1,6 +1,6 @@
 return {
 
-	{'NvChad/nvim-colorizer.lua', opts = {} },
+	{'NvChad/nvim-colorizer.lua', config = true, lazy = false, opts = {}, enabled = true, },
 	{'rktjmp/lush.nvim'},
 	{'uga-rosa/ccc.nvim'},
 
@@ -10,8 +10,8 @@ return {
 	{'challenger-deep-theme/vim'},
 	{'Everblush/nvim', name = 'everblush'},
     {'EdenEast/nightfox.nvim'},
-	--{'rose-pine/neovim', name = 'rose-pine'},
-	{ dir = '~/.config/nvim/lua/plugins/rosepine/'},
+	{'rose-pine/neovim', name = 'rose-pine'},
+	--{ dir = '~/.config/nvim/lua/plugins/rosepine/'},
 	{'LunarVim/horizon.nvim', name = 'horizon'},
 	{'nyoom-engineering/oxocarbon.nvim'},
 	{'Mofiqul/vscode.nvim'},
@@ -28,7 +28,7 @@ return {
 	{'monsonjeremy/onedark.nvim'},
 
 	{
-		'Rydwxz/styler.nvim',
+		'folke/styler.nvim',
 		enabled = false,
 		opts = {
 			themes = {

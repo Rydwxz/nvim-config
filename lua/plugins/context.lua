@@ -1,5 +1,6 @@
 return {
 
-	'wellle/context.vim',
+	--'wellle/context.vim',
+	'nvim-treesitter/nvim-treesitter-context'
 
 }

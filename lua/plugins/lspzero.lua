@@ -16,8 +16,7 @@ return {
 	{'hrsh7th/cmp-buffer'}, -- Required
 	{'hrsh7th/cmp-path'}, -- Required
 
-	{
-		'VonHeikemen/lsp-zero.nvim',
+	{'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
 	    {'ray-x/lsp_signature.nvim'},
 		{'SmiteshP/nvim-navic'},

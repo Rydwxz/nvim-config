@@ -59,6 +59,7 @@ return {
 				'pyre',
                 'quick_lint_js',
 				'reason_ls',
+				'rust_analyzer',
                 'sorbet', --ruby
                 'sqlls',
                 'taplo',

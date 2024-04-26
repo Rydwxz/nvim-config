@@ -8,6 +8,11 @@ return {
 		defaults = {
 			path_display = { shorten = 3, },
 		},
+		pickers = {
+			find_files = {
+				hidden = true,
+			},
+		},
 	},
 
 }

@@ -26,6 +26,16 @@ return {
 	{'sainnhe/sonokai'},
 	{'sainnhe/edge'},
 	{'monsonjeremy/onedark.nvim'},
+	{'eldritch-theme/eldritch.nvim'},
+	{'zootedb0t/citruszest.nvim'},
+	{'ishan9299/modus-theme-vim'},--{'miikanissi/modus-themes.nvim',opts={transparent=true},},
+	{'kevinm6/kurayami.nvim'},
+	{'samharju/synthweave.nvim'},
+	{'scottmckendry/cyberdream.nvim'},
+	{'alexmozaidze/palenight.nvim'},
+	{'Mofiqul/adwaita.nvim'},
+	{'shaunsingh/moonlight.nvim'},
+	{'bkegley/gloombuddy', dependencies = {'tjdevries/colorbuddy.vim'},},
 
 	{
 		'folke/styler.nvim',

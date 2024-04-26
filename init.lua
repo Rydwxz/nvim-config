@@ -1,5 +1,5 @@
 require('opt')
-require('fnc')
+local usr_fnc = require('fnc')
 
 vim.g.mapleader = ' '
 
@@ -17,5 +17,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme modus-vivendi')
 require('kmp')
+--usr_fnc.setBg0()

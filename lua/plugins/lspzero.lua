@@ -16,8 +16,7 @@ return {
 	{'hrsh7th/cmp-buffer'}, -- Required
 	{'hrsh7th/cmp-path'}, -- Required
 
-	{
-		'VonHeikemen/lsp-zero.nvim',
+	{'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
 	    {'ray-x/lsp_signature.nvim'},
 		{'SmiteshP/nvim-navic'},
@@ -38,6 +37,16 @@ return {
 		},
 
 	config = function()
+		local lsp = require('lsp-zero').preset({'recommended'})
+		local navic = require('nvim-navic')
+		local sig = require('lsp_signature').setup()
+		lsp.on_attach(function(client, bufnr)
+			navic.attach(client, bufnr)
+			require('lsp_signature').on_attach(sig, bufnr)
+			lsp.default_keymaps({buffer = bufnr })
+		end)
+		lsp.setup()
+
 		require('mason').setup()
 		require('mason-lspconfig').setup({
 			ensure_installed = {
@@ -50,7 +59,7 @@ return {
                 'dockerls',
                 'fennel_language_server',
 				'gopls',
-				'hls',
+				--'hls',
                 'jsonls',
                 'lemminx', --xml
 				'lua_ls',
@@ -60,6 +69,7 @@ return {
 				'pyre',
                 'quick_lint_js',
 				'reason_ls',
+				'rust_analyzer',
                 'sorbet', --ruby
                 'sqlls',
                 'taplo',
@@ -68,17 +78,13 @@ return {
                 'yamlls',
                 'zls',
 			},
+			handlers = {
+				function(server_name)
+                    require('lspconfig')[server_name].setup({})
+				end,
+			},
 		})
 
-		local lsp = require('lsp-zero').preset({'recommended'})
-		local navic = require('nvim-navic')
-		local sig = require('lsp_signature').setup()
-		lsp.on_attach(function(client, bufnr)
-			navic.attach(client, bufnr)
-			require('lsp_signature').on_attach(sig, bufnr)
-			lsp.default_keymaps({buffer = bufnr })
-		end)
-		lsp.setup()
 
 		local cmp = require('cmp')
 		cmp.setup({

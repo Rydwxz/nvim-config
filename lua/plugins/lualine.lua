@@ -102,7 +102,6 @@ return {
 	dependencies = {
 	    'ray-x/lsp_signature.nvim',
 		'SmiteshP/nvim-navic',
-		'linrongbin16/lsp-progress.nvim',
 	},
 	extensions = {
 		'fugitive',

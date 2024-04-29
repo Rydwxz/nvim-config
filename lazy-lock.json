@@ -72,5 +72,6 @@
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-lighthaus": { "branch": "master", "commit": "9fa6242ff0cf067bb6e29f67988af9a9cd66ffc1" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
+  "vim-tabby": { "branch": "main", "commit": "afd76df166ed0f223ede1071e0cfde8075cc4a24" },
   "vscode.nvim": { "branch": "main", "commit": "bf62428d842ed1fb9c33353be10af40bac51e825" }
 }

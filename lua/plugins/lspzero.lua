@@ -16,8 +16,7 @@ return {
 	{'hrsh7th/cmp-buffer'}, -- Required
 	{'hrsh7th/cmp-path'}, -- Required
 
-	{
-		'VonHeikemen/lsp-zero.nvim',
+	{'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
 	    {'ray-x/lsp_signature.nvim'},
 		{'SmiteshP/nvim-navic'},
@@ -38,23 +37,6 @@ return {
 		},
 
 	config = function()
-		require('mason').setup()
-		require('mason-lspconfig').setup({
-			ensure_installed = {
-                'bashls',
-				'clangd',
-				'cmake',
-                'jsonls',
-                'lemminx', --xml
-				'lua_ls',
-				'marksman',
-				'pyre',
-                'sorbet', --ruby
-                'vimls',
-                'yamlls',
-			},
-		})
-
 		local lsp = require('lsp-zero').preset({'recommended'})
 		local navic = require('nvim-navic')
 		local sig = require('lsp_signature').setup()
@@ -64,6 +46,37 @@ return {
 			lsp.default_keymaps({buffer = bufnr })
 		end)
 		lsp.setup()
+
+		require('mason').setup()
+		require('mason-lspconfig').setup({
+			ensure_installed = {
+                'bashls',
+				'clangd',
+				'cmake',
+                'cssls',
+                'dockerls',
+                'fennel_language_server',
+				'gopls',
+				--'hls',
+                'jsonls',
+                'lemminx', --xml
+				'lua_ls',
+				'marksman',
+				'pyre',
+                'quick_lint_js',
+				'reason_ls',
+				'rust_analyzer',
+                'sorbet', --ruby
+                'vimls',
+                'yamlls',
+			},
+			handlers = {
+				function(server_name)
+                    require('lspconfig')[server_name].setup({})
+				end,
+			},
+		})
+
 
 		local cmp = require('cmp')
 		cmp.setup({

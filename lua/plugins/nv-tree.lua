@@ -40,6 +40,7 @@ return {
 	    },
 		filters = {
 			git_clean = false,
+			git_ignored = false
 	    },
 		modified = {
 			enable = true,

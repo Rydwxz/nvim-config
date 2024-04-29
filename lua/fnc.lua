@@ -8,4 +8,10 @@ M.numbertoggle = function ()
 	end
 end
 
+M.setBg0 = function ()
+	local hl = vim.api.nvim_get_hl('NvimTreeNormal')
+	hl[1] = '#000000';
+	vim.api.nvim_set_hl(0,'NvimTreeNormal',hl)
+end
+
 return M

@@ -1,6 +1,6 @@
 return {
 
-	{'NvChad/nvim-colorizer.lua', opts = {} },
+	{'NvChad/nvim-colorizer.lua', config = true, lazy = false, opts = {}, enabled = true, },
 	{'rktjmp/lush.nvim'},
 	{'uga-rosa/ccc.nvim'},
 
@@ -26,9 +26,19 @@ return {
 	{'sainnhe/sonokai'},
 	{'sainnhe/edge'},
 	{'monsonjeremy/onedark.nvim'},
+	{'eldritch-theme/eldritch.nvim'},
+	{'zootedb0t/citruszest.nvim'},
+	{'ishan9299/modus-theme-vim'},--{'miikanissi/modus-themes.nvim',opts={transparent=true},},
+	{'kevinm6/kurayami.nvim'},
+	{'samharju/synthweave.nvim'},
+	{'scottmckendry/cyberdream.nvim'},
+	{'alexmozaidze/palenight.nvim'},
+	{'Mofiqul/adwaita.nvim'},
+	{'shaunsingh/moonlight.nvim'},
+	{'bkegley/gloombuddy', dependencies = {'tjdevries/colorbuddy.vim'},},
 
 	{
-		'Rydwxz/styler.nvim',
+		'folke/styler.nvim',
 		enabled = false,
 		opts = {
 			themes = {

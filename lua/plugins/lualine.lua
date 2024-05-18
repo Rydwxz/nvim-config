@@ -24,6 +24,42 @@ local colors = {
 local statusline_theme = {
 	normal = {
 		 a = { bg = colors.neon, fg = colors.black, gui = 'bold' },
+		 b = vim.api.nvim_get_hl(0,{name='LualineNB'}),
+		 c = vim.api.nvim_get_hl(0,{name='LualineNC'}),
+	  },
+	  insert = {
+		 a = { bg = colors.brightred, fg = colors.dark, gui = 'bold' },
+		 b = { bg = colors.white, fg = colors.black },
+		 c = { bg = colors.dark, fg = colors.brightgreen },
+		 y = { bg = colors.brightred, fg = colors.dark},
+		 z = { bg = colors.white, fg = colors.dark},
+	  },
+	  visual = {
+		 a = { bg = colors.blue, fg = colors.black, gui = 'bold' },
+		 b = { bg = colors.green, fg = colors.black },
+		 c = { bg = colors.black, fg = colors.white },
+		 z = { bg = colors.green, fg = colors.dark},
+	  },
+	  replace = {
+		 a = { bg = colors.brightred, fg = colors.white, gui = 'bold' },
+		 b = { bg = colors.cyan, fg = colors.darkblue },
+		 c = { bg = colors.navyblue, fg = colors.white },
+	  },
+	  command = {
+		 a = { bg = colors.purple, fg = colors.brightred, gui = 'bold' },
+		 b = { bg = colors.dark, fg = colors.darkgray },
+		 c = { bg = colors.dark, fg = colors.dark },
+	  },
+	  inactive = {
+		 a = { bg = colors.darkgray, fg = colors.black, gui = 'bold' },
+		 b = { bg = colors.darkgray, fg = colors.black },
+		 c = { bg = colors.darkgray, fg = colors.black },
+	  },
+
+}
+local old_statusline_theme = {
+	normal = {
+		 a = { bg = colors.neon, fg = colors.black, gui = 'bold' },
 		 b = { bg = colors.noen, fg = colors.white },
 		 c = { bg = colors.black, fg = colors.red },
 	  },
@@ -104,6 +140,7 @@ return {
 	dependencies = {
 	    'ray-x/lsp_signature.nvim',
 		'SmiteshP/nvim-navic',
+		'Rydwxz/bhs',
 	},
 	extensions = {
 		'fugitive',

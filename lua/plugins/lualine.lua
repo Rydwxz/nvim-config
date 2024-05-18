@@ -28,14 +28,15 @@ local statusline_theme = {
 		 c = { bg = colors.black, fg = colors.red },
 	  },
 	  insert = {
-		 a = { bg = colors.white, fg = colors.dark, gui = 'bold' },
-		 b = { bg = colors.dark, fg = colors.brightgreen },
-		 c = { bg = colors.brightred, fg = colors.black },
+		 a = { bg = colors.brightred, fg = colors.dark, gui = 'bold' },
+		 b = { bg = colors.white, fg = colors.black },
+		 c = { bg = colors.dark, fg = colors.brightgreen },
+		 y = { bg = colors.brightred, fg = colors.dark},
 		 z = { bg = colors.white, fg = colors.dark},
 	  },
 	  visual = {
-		 a = { bg = colors.green, fg = colors.black, gui = 'bold' },
-		 b = { bg = colors.blue, fg = colors.black },
+		 a = { bg = colors.blue, fg = colors.black, gui = 'bold' },
+		 b = { bg = colors.green, fg = colors.black },
 		 c = { bg = colors.black, fg = colors.white },
 		 z = { bg = colors.green, fg = colors.dark},
 	  },
@@ -54,6 +55,7 @@ local statusline_theme = {
 		 b = { bg = colors.darkgray, fg = colors.black },
 		 c = { bg = colors.darkgray, fg = colors.black },
 	  },
+
 }
 return {
 
@@ -64,8 +66,8 @@ return {
 			component_separators = {right = ''},
 		},
 		sections = {
-			lualine_a = {'mode'},
-			lualine_b = {'filename'},
+			lualine_a = {}, -- {{'mode', fmt = function(res) return res:sub(1,1)..":" end}},
+			lualine_b = {{'filename', path = 1 }},
 			lualine_c = {function ()
 				return require('nvim-navic').get_location()
 			end},

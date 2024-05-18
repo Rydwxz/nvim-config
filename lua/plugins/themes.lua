@@ -2,10 +2,11 @@ return {
 
 	{'NvChad/nvim-colorizer.lua', config = true, lazy = false, opts = {}, enabled = true, },
 	{'rktjmp/lush.nvim'},
-	{'uga-rosa/ccc.nvim'},
+	{'uga-rosa/ccc.nvim', opts ={},},
 
 	{'Rydwxz/bhs'},
 
+	{'Skalyaeve/a-nvim-theme'},
 	{'projekt0n/caret.nvim'},
 	{'challenger-deep-theme/vim'},
 	{'Everblush/nvim', name = 'everblush'},

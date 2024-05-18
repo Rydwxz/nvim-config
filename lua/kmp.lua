@@ -17,6 +17,8 @@ kym('n', '<leader>tc', '<cmd>ColorizerToggle<cr>')
 
 --cmp mapping declared in lspzero.lua for reasons
 --
+--diagnostics
+kym('n', '<leader>dc', function() vim.diagnostic.open_float() end)
 --
 --flash map in flash.lua for laziness
 --
@@ -40,7 +42,6 @@ kym('n', '<leader>f/', function() require('telescope.builtin').current_buffer_fu
 kym('n', '<leader>fg', function() require('telescope.builtin').git_files(ivy) end )
 kym('n', '<leader>fm', function() require('telescope.builtin').marks(ivy) end )
 kym('n', '<leader>fr', function() require('telescope.builtin').lsp_references(ivy) end )
-kym('n', '<leader>fd', function() require('telescope.builtin').lsp_definitions(ivy) end )
 kym('n', '<leader>fi', function() require('telescope.builtin').lsp_implementation(ivy) end )
 kym('n', '<leader>fq', function() require('telescope.builtin').quickfix(ivy) end )
 kym('n', '<leader>fc', function() require('telescope.builtin').grep_string(ivy) end )--cursor
@@ -50,6 +51,7 @@ kym('n', '<leader>fp', function() require('telescope.builtin').man_pages(ivy) en
 kym('n', '<leader>fo', function() require('telescope.builtin').vim_options(ivy) end )
 kym('n', '<leader>fy', function() require('telescope.builtin').registers(ivy) end )--yank
 kym('n', '<leader>fk', function() require('telescope.builtin').keymaps(ivy) end )
+kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) end )
 
 --tree
 kym('n', '<leader>r', '<cmd>NvimTreeToggle<cr>')

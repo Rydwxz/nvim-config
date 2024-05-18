@@ -7,5 +7,6 @@ return {
     "NvimTreeNormal" -- NvimTree
   },
 	},
+	lazy = false,
 
 }

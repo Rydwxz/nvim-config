@@ -1,6 +1,6 @@
 return {
 
-	{'neovim/nvim-lspconfig'},             -- Required
+	{'neovim/nvim-lspconfig',},             -- Required
 	{                                      -- Optional
 		'williamboman/mason.nvim',
 		build = function()
@@ -51,11 +51,11 @@ return {
 		require('mason-lspconfig').setup({
 			ensure_installed = {
                 'bashls',
+				'biome',
 				'clangd',
 				'cmake',
                 'cssls',
                 'dockerls',
-                'fennel_language_server',
 				'gopls',
 				--'hls',
                 'jsonls',
@@ -67,6 +67,7 @@ return {
 				'reason_ls',
 				'rust_analyzer',
                 'sorbet', --ruby
+				'tsserver',
                 'vimls',
                 'yamlls',
 			},

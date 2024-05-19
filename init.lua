@@ -1,4 +1,4 @@
-require('opt')
+require('pre')
 local usr_fnc = require('fnc')
 
 vim.g.mapleader = ' '
@@ -17,6 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
-vim.cmd('colorscheme modus-vivendi')
+vim.cmd('colorscheme black_hole_sun')
 require('kmp')
+require('pst')
 --usr_fnc.setBg0()

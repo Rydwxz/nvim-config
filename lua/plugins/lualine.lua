@@ -63,12 +63,13 @@ return {
 			lualine_b = {function ()
 				return require('nvim-navic').get_location()
 			end},
-			lualine_c = {},
+			lualine_c = { function()
+				local sig = require('lsp_signature').status_line(80)
+				return sig.label
+			end},
 
 			lualine_x = { function()
-				if not pcall(require, 'lsp_signature') then return end
-				local sig = require('lsp_signature').status_line()
-				return sig.label
+				return require('lsp-progress').progress()
 			end},
 			lualine_y = {'progress', 'filesize'},
 			lualine_z = {
@@ -95,6 +96,7 @@ return {
 		},
 	},
 	dependencies = {
+	    'linrongbin16/lsp-progress.nvim',
 	    'ray-x/lsp_signature.nvim',
 		'SmiteshP/nvim-navic',
 		'Rydwxz/bhs',

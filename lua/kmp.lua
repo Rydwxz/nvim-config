@@ -29,6 +29,9 @@ vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (se
 --numberline
 kym('n', '<leader>nn', function () require('fnc').numbertoggle() end)
 
+--oil
+kym('n', '-', '<CMD>Oil<CR>')
+
 --playground
 kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
 kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')

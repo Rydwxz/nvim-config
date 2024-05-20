@@ -1,10 +1,14 @@
 return {
 
    'nvim-tree/nvim-tree.lua',
+   dependencies = {
+		'nvim-tree/nvim-web-devicons',
+	},
    opts = {
 		disable_netrw = true,
 		hijack_unnamed_buffer_when_opening = true,
 		sort_by = 'filetype',
+        respect_buf_cwd = true,
 		view = {
 			width = 32,
 			relativenumber = true,
@@ -13,8 +17,9 @@ return {
 			group_empty = true,
 			highlight_opened_files = 'all',
 			highlight_modified = 'all',
-			root_folder_label = 'nv@i7desk_rw',
 			indent_width = 1,
+			add_trailing = true,
+			root_folder_label = ':~',
 		    icons = {
 				modified_placement = 'before',
 				glyphs = {
@@ -47,8 +52,11 @@ return {
 	    },
 		actions = {
 			open_file = {
-				quit_on_open= true,
+				quit_on_open = false,
 			},
+		},
+		trash = {
+			cmd = "trash put",
 		},
 		on_attach = function (nBuf)
 			local api = require('nvim-tree.api')

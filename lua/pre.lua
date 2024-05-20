@@ -17,3 +17,4 @@ vim.o.softtabstop = 2
 vim.g.have_nerd_font = true
 
 vim.o.updatetime = 500
+

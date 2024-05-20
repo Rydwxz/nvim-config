@@ -3,7 +3,7 @@ local kym = function(a,b,c) vim.keymap.set(a,b,c) end
 --buffers/tabs
 kym('n', '<leader>,', '<Cmd>bprev<CR>')
 kym('n', '<leader>.', '<Cmd>bnext<CR>')
-kym('n', '<leader>x', '<Cmd>bd<CR>')
+kym('n', '<leader>x', '<Cmd>Bclose<CR>')
 
 --codewindow
 kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
@@ -58,6 +58,9 @@ kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) 
 
 --tree
 kym('n', '<leader>r', '<cmd>NvimTreeFocus<cr>')
+
+--renamer
+kym('n', '<leader>dr', function () require("renamer").rename() end)
 
 --scroll
 local sm = {}

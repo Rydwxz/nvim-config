@@ -20,8 +20,8 @@ local function my_on_attach(bufnr)
   vim.keymap.set('n', '.',       api.node.run.cmd,                    opts('Run Command'))
   vim.keymap.set('n', '-',       api.tree.change_root_to_parent,      opts('Up'))
   vim.keymap.set('n', 'a',       api.fs.create,                       opts('Create File Or Directory'))
-  vim.keymap.set('n', 'bd',      api.marks.bulk.delete,               opts('Delete Bookmarked'))
-  vim.keymap.set('n', 'bt',      api.marks.bulk.trash,                opts('Trash Bookmarked'))
+  --vim.keymap.set('n', 'bd',      api.marks.bulk.delete,               opts('Delete Bookmarked'))
+  vim.keymap.set('n', 'bd',      api.marks.bulk.trash,                opts('Trash Bookmarked'))
   vim.keymap.set('n', 'bmv',     api.marks.bulk.move,                 opts('Move Bookmarked'))
   vim.keymap.set('n', 'B',       api.tree.toggle_no_buffer_filter,    opts('Toggle Filter: No Buffer'))
   vim.keymap.set('n', 'c',       api.fs.copy.node,                    opts('Copy'))
@@ -126,12 +126,7 @@ return {
 		trash = {
 			cmd = "trash put",
 		},
-		on_attach = function (nBuf)
-			local api = require('nvim-tree.api')
-			api.config.mappings.default_on_attach(nBuf)
-			vim.keymap.set('n', 't', api.node.open.tab)
-			vim.keymap.set('n', 'T', api.node.open.vertical)
-		end
+		on_attach = my_on_attach
    },
 
 }

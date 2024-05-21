@@ -3,7 +3,7 @@ local kym = function(a,b,c) vim.keymap.set(a,b,c) end
 --buffers/tabs
 kym('n', '<leader>,', '<Cmd>bprev<CR>')
 kym('n', '<leader>.', '<Cmd>bnext<CR>')
-kym('n', '<leader>x', '<Cmd>Bclose<CR>')
+kym('n', '<leader>x', function () require('bufdelete').bufdelete(0,true) end)
 
 --codewindow
 kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
@@ -61,12 +61,6 @@ kym('n', '<leader>r', '<cmd>NvimTreeFocus<cr>')
 
 --renamer
 kym('n', '<leader>dr', function () require("renamer").rename() end)
-
---scroll
-local sm = {}
-sm['<c-j>'] = {'scroll', {'28','true','100'}}
-sm['<c-k>'] = {'scroll', {'-28','true','100'}}
-require('neoscroll.config').set_mappings(sm)
 
 --smartsplits
 vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)

@@ -1,6 +1,8 @@
 return {
 
-	'https://github.com/pocco81/auto-save.nvim',
-  opts = {},
+	'okuuva/auto-save.nvim',
+  opts = {
+		debounce_delay = 6000
+	},
 
 }

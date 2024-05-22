@@ -1,10 +1,10 @@
 return {
   {
-	'numToStr/Comment.nvim',
-	opts = {},
+	  'numToStr/Comment.nvim',
+	  opts = {},
   },
 	{
-	'monaqa/dial.nvim',
+	  'monaqa/dial.nvim',
 	},
 	{
 		'nat-418/boole.nvim', -- C-a C-x
@@ -17,4 +17,8 @@ return {
 		-- 	},
 		},
 	},
+	{
+	  'echasnovski/mini.splitjoin',
+	},
+
 }

@@ -13,5 +13,9 @@ return {
 	  'wellle/targets.vim',
 	  lazy = false,
 	},
+	{
+	  'chrisgrieser/nvim-spider',
+	  lazy = true,
+	},
 
 }

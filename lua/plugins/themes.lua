@@ -10,7 +10,7 @@ return {
 	{'projekt0n/caret.nvim'},
 	{'challenger-deep-theme/vim'},
 	{'Everblush/nvim', name = 'everblush'},
-    {'EdenEast/nightfox.nvim'},
+    {'EdenEast/nightfox.nvim'}, -- GOAT
 	{'rose-pine/neovim', name = 'rose-pine'},
 	--{ dir = '~/.config/nvim/lua/plugins/rosepine/'},
 	{'LunarVim/horizon.nvim', name = 'horizon'},

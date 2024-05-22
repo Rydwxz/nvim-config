@@ -1,5 +1,5 @@
 local options = require('rose-pine.config').options
-
+-- this is my personal variant - rosewood, or dusk, if you will
 local variants = {
 	main = {
 		---@deprecated for backwards compatibility

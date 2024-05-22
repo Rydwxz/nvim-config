@@ -1,14 +1,5 @@
 return {
 
-  {
-	'SmiteshP/nvim-navic',
-	opts = {
-		lsp = {
-			auto_attach = true,
-		},
-		separator = ' ',
-	},
-	},
 	{
 	'linrongbin16/lsp-progress.nvim',
 	opts = {},
@@ -22,10 +13,6 @@ return {
     dependencies = {
         'neovim/nvim-lspconfig',
     },
-	},
-	{
-	'ray-x/lsp_signature.nvim',
-    config = function(_, opts) require'lsp_signature'.setup(opts) end
 	},
 	{
 	'lewis6991/hover.nvim',

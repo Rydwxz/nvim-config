@@ -1,5 +1,4 @@
 require('pre')
-local usr_fnc = require('fnc')
 
 vim.g.mapleader = ' '
 
@@ -20,4 +19,3 @@ require("lazy").setup('plugins')
 vim.cmd('colorscheme black_hole_sun')
 require('kmp')
 require('pst')
---usr_fnc.setBg0()

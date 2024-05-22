@@ -74,7 +74,7 @@ return {
 	},
    opts = {
 		disable_netrw = true,
-		hijack_unnamed_buffer_when_opening = true,
+		-- hijack_unnamed_buffer_when_opening = true,
 		sort_by = 'filetype',
         respect_buf_cwd = true,
 		view = {

@@ -16,7 +16,11 @@ return {
 				'markdown_inline',
 				'python',
 				'rust',
-				'toml'
+				'toml',
+				'javascript',
+				'typescript',
+  			'tsx',
+				'go',
 			},
 			highlight = {enable = true},
 			indent = {enable = true},

@@ -13,7 +13,7 @@ return {
 			--style = '#f9003f',
 			use_treesitter = false,
 			chars = {
-				horizontal_line = '',
+				-- horizontal_line = '',
 				right_arrow = '',
 			},
 		},

@@ -1,0 +1,5 @@
+return {
+
+	'gsuuon/model.nvim',
+
+}

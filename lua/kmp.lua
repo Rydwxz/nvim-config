@@ -57,7 +57,7 @@ kym('n', '<leader>fk', function() require('telescope.builtin').keymaps(ivy) end 
 kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) end )
 
 --tree
-kym('n', '<leader>r', '<cmd>NvimTreeFocus<cr>')
+kym('n', '<leader>r', '<cmd>NvimTreeToggle<cr>')
 
 --renamer
 kym('n', '<leader>dr', function () require("renamer").rename() end)

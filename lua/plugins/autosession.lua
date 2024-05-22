@@ -1,11 +1,19 @@
+-- local function pre_sve_cmd()
+--   require("nvim-tree.api").tree.toggle({focus = false})
+-- end
+--
+-- local function pst_rst_cmd()
+--   require("nvim-tree.api").tree.toggle({focus = false})
+-- end
+
 return {
 
 	{
 	  'rmagatti/auto-session',
 	  opts = {
-	  	-- post_restore_cmds = {
-	  	-- 	'lua require("nvim-tree.api").tree.toggle({focus = false})',
-	  	-- },
+			-- pre_save_cmds = { pre_sve_cmd },
+	  -- 	post_restore_cmds = { pst_rst_cmd	},
+      auto_session_use_git_branch = true,
 	  },
 	  dependencies = {
 	  	'nvim-tree/nvim-tree.lua',

@@ -1,43 +1,43 @@
 local kym = function(a,b,c) vim.keymap.set(a,b,c) end
 --
 --buffers/tabs
-kym('n', '<leader>,', '<Cmd>bprev<CR>')
-kym('n', '<leader>.', '<Cmd>bnext<CR>')
-kym('n', '<leader>x', function () require('bufdelete').bufdelete(0,true) end)
-
---codewindow
-kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
-kym('n', '<leader>mf', function() require('codewindow').toggle_focus() end )
-
---color picker
-kym('n', '<leader>4', '<cmd>CccPick<cr>')
-
---colorizer
-kym('n', '<leader>tc', '<cmd>ColorizerToggle<cr>')
-
---cmp mapping declared in lspzero.lua for reasons
+-- kym('n', '<leader>,', '<Cmd>bprev<CR>')
+-- kym('n', '<leader>.', '<Cmd>bnext<CR>')
+-- kym('n', '<leader>x', function () require('bufdelete').bufdelete(0,true) end)
 --
---diagnostics
-kym('n', '<leader>dc', function() vim.diagnostic.open_float() end)
+-- --codewindow
+-- kym('n', '<leader>mm', function() require('codewindow').toggle_minimap() end )
+-- kym('n', '<leader>mf', function() require('codewindow').toggle_focus() end )
 --
---flash map in flash.lua for laziness
+-- --color picker
+-- kym('n', '<leader>4', '<cmd>CccPick<cr>')
 --
---hover
-vim.keymap.set("n", "<leader>k", require("hover").hover, {desc = "hover.nvim"})
-vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (select)"})
-
---numberline
-kym('n', '<leader>nn', function () require('fnc').numbertoggle() end)
-
---oil
-kym('n', '-', '<CMD>Oil<CR>')
-
---playground
-kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
-kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')
-
---tabby
-vim.g.tabby_keybinding_accept = '<C-i>'
+-- --colorizer
+-- kym('n', '<leader>tc', '<cmd>ColorizerToggle<cr>')
+--
+-- --cmp mapping declared in lspzero.lua for reasons
+-- --
+-- --diagnostics
+-- kym('n', '<leader>dc', function() vim.diagnostic.open_float() end)
+-- --
+-- --flash map in flash.lua for laziness
+-- --
+-- --hover
+-- vim.keymap.set("n", "<leader>k", require("hover").hover, {desc = "hover.nvim"})
+-- vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (select)"})
+--
+-- --numberline
+-- kym('n', '<leader>nn', function () require('fnc').numbertoggle() end)
+--
+-- --oil
+-- kym('n', '-', '<CMD>Oil<CR>')
+--
+-- --playground
+-- kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
+-- kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')
+--
+-- --tabby
+-- vim.g.tabby_keybinding_accept = '<C-i>'
 
 --telescope
 local ivy = require('telescope.themes').get_ivy()
@@ -60,39 +60,39 @@ kym('n', '<leader>fk', function() require('telescope.builtin').keymaps(ivy) end 
 kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) end )
 
 --terminal
-vim.keymap.set('t', '<C-Space>', [[<C-\><C-n>]])
-
---tree
-kym('n', '<leader>rt', '<cmd>NvimTreeToggle<cr>')
-kym('n', '<leader>rf', '<cmd>NvimTreeFocus<cr>')
-
---renamer
-kym('n', '<leader>dr', function () require("renamer").rename() end)
-
---smartsplits
-vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
-vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
-vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
-vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
--- moving between splits
-vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
-vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
-vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
-vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
-vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
--- swapping buffers between windows
-vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
-vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
-vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
-vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
-
---spider
-kym({"n"}, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-kym({"o","v",'x'}, "f", function ()require('spider').motion('w') end, {remap=true} )
-kym({"o",'v','x'}, "F", function ()require('spider').motion('w') end,{remap=true, skipInsignificantPunctuation = false} )
-kym({"n"}, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-kym({"n"}, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-kym({"n"}, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
-
---undotree
-kym("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
+-- vim.keymap.set('t', '<C-Space>', [[<C-\><C-n>]])
+--
+-- --tree
+-- kym('n', '<leader>rt', '<cmd>NvimTreeToggle<cr>')
+-- kym('n', '<leader>rf', '<cmd>NvimTreeFocus<cr>')
+--
+-- --renamer
+-- kym('n', '<leader>dr', function () require("renamer").rename() end)
+--
+-- --smartsplits
+-- vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+-- vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+-- vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+-- vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+-- -- moving between splits
+-- vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+-- vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+-- vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+-- vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
+-- vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+-- -- swapping buffers between windows
+-- vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
+-- vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
+-- vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
+-- vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
+--
+-- --spider
+-- kym({"n"}, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
+-- kym({"o","v",'x'}, "f", function ()require('spider').motion('w') end, {remap=true} )
+-- kym({"o",'v','x'}, "F", function ()require('spider').motion('w') end,{remap=true, skipInsignificantPunctuation = false} )
+-- kym({"n"}, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
+-- kym({"n"}, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
+-- kym({"n"}, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
+--
+-- --undotree
+-- kym("n", "<leader>u", "<cmd>UndotreeToggle<cr>")

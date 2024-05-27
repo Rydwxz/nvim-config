@@ -1,5 +1,18 @@
-return {
-
-	'gsuuon/model.nvim',
-
-}
+-- return {
+--
+-- 	'gsuuon/model.nvim',
+-- 	opts = {
+-- 		prompts = require('model.util').module.autoload('prompts'),
+-- 		chats = {},
+-- 		hl_group = 'ModelInProgress',
+--
+-- 	},
+-- 	config = function ()
+-- 		require('model.providers.llamacpp').setup({
+-- 		  binary = '~/path/to/server/binary',
+--   	  models = '~/path/to/models/directory'
+--   	})
+-- 	end,
+--
+-- }
+return {}

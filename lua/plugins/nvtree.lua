@@ -75,6 +75,7 @@ return {
    opts = {
 		disable_netrw = true,
 		hijack_unnamed_buffer_when_opening = true,
+    hijack_directories = {enable=true},
 		sort_by = 'filetype',
         respect_buf_cwd = true,
 		view = {
@@ -121,7 +122,11 @@ return {
 		actions = {
 			open_file = {
 				quit_on_open = false,
+        window_picker = {
+          chars = 'ASDFJKL:'
+        }
 			},
+      use_system_clipboard = true,
 		},
 		trash = {
 			cmd = "trash put",

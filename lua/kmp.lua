@@ -36,6 +36,9 @@ kym('n', '-', '<CMD>Oil<CR>')
 kym('n', '<leader>ht', '<cmd>TSPlaygroundToggle<cr>')
 kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')
 
+--tabby
+vim.g.tabby_keybinding_accept = '<C-i>'
+
 --telescope
 local ivy = require('telescope.themes').get_ivy()
 kym('n', '<leader>ff', function() require('telescope.builtin').find_files(ivy) end )
@@ -56,8 +59,12 @@ kym('n', '<leader>fy', function() require('telescope.builtin').registers(ivy) en
 kym('n', '<leader>fk', function() require('telescope.builtin').keymaps(ivy) end )
 kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) end )
 
+--terminal
+vim.keymap.set('t', '<C-Space>', [[<C-\><C-n>]])
+
 --tree
-kym('n', '<leader>r', '<cmd>NvimTreeToggle<cr>')
+kym('n', '<leader>rt', '<cmd>NvimTreeToggle<cr>')
+kym('n', '<leader>rf', '<cmd>NvimTreeFocus<cr>')
 
 --renamer
 kym('n', '<leader>dr', function () require("renamer").rename() end)

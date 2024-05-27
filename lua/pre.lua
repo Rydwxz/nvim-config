@@ -18,3 +18,4 @@ vim.g.have_nerd_font = true
 
 vim.o.updatetime = 500
 
+vim.o.scrolloff = 4

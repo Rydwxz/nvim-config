@@ -1,12 +1,5 @@
 return {
-  {
-	  'numToStr/Comment.nvim',
-	  opts = {},
-  },
-	{
-	  'monaqa/dial.nvim',
-	},
-	{
+
 		'nat-418/boole.nvim', -- C-a C-x
 		opts = {
       mappings = {
@@ -14,9 +7,5 @@ return {
         decrement = '<C-x>'
       },
 		},
-	},
-	{
-	  'echasnovski/mini.splitjoin',
-	},
 
 }

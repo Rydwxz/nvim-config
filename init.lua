@@ -14,7 +14,17 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup('plugins')
+require("lazy").setup({
+  { import = 'plugins' },
+  { import = 'plugins.context' },
+  { import = 'plugins.format' },
+  { import = 'plugins.lsp-utils' },
+  { import = 'plugins.nav' },
+  { import = 'plugins.nv-util' },
+  { import = 'plugins.session' },
+  { import = 'plugins.txt-obj' },
+  { import = 'plugins.win-mgt' },
+})
 
 vim.cmd('colorscheme black_hole_sun')
 require('kmp')

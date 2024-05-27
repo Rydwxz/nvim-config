@@ -40,24 +40,23 @@ kym('n', '<leader>hc', '<cmd>TSNodeUnderCursor<cr>')
 vim.g.tabby_keybinding_accept = '<C-i>'
 
 --telescope
-local ivy = require('telescope.themes').get_ivy()
-kym('n', '<leader>ff', function() require('telescope.builtin').find_files(ivy) end )
-kym('n', '<leader>fs', function() require('telescope.builtin').live_grep(ivy) end )--cwd
-kym('n', '<leader>ft', function() require('telescope.builtin').treesitter(ivy) end )
-kym('n', '<leader>f/', function() require('telescope.builtin').current_buffer_fuzzy_find(ivy) end )
-kym('n', '<leader>fg', function() require('telescope.builtin').git_files(ivy) end )
-kym('n', '<leader>fm', function() require('telescope.builtin').marks(ivy) end )
-kym('n', '<leader>fr', function() require('telescope.builtin').lsp_references(ivy) end )
-kym('n', '<leader>fi', function() require('telescope.builtin').lsp_implementation(ivy) end )
-kym('n', '<leader>fq', function() require('telescope.builtin').quickfix(ivy) end )
-kym('n', '<leader>fc', function() require('telescope.builtin').grep_string(ivy) end )--cursor
-kym('n', '<leader>fb', function() require('telescope.builtin').buffers(ivy) end )
-kym('n', '<leader>fh', function() require('telescope.builtin').help_tags(ivy) end )
-kym('n', '<leader>fp', function() require('telescope.builtin').man_pages(ivy) end )--pages
-kym('n', '<leader>fo', function() require('telescope.builtin').vim_options(ivy) end )
-kym('n', '<leader>fy', function() require('telescope.builtin').registers(ivy) end )--yank
-kym('n', '<leader>fk', function() require('telescope.builtin').keymaps(ivy) end )
-kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics(ivy) end )
+kym('n', '<leader>ff', function() require('telescope.builtin').find_files() end )
+kym('n', '<leader>fs', function() require('telescope.builtin').live_grep() end )--cwd
+kym('n', '<leader>ft', function() require('telescope.builtin').treesitter() end )
+kym('n', '<leader>f/', function() require('telescope.builtin').current_buffer_fuzzy_find() end )
+kym('n', '<leader>fg', function() require('telescope.builtin').git_files() end )
+kym('n', '<leader>fm', function() require('telescope.builtin').marks() end )
+kym('n', '<leader>fr', function() require('telescope.builtin').lsp_references() end )
+kym('n', '<leader>fi', function() require('telescope.builtin').lsp_implementation() end )
+kym('n', '<leader>fq', function() require('telescope.builtin').quickfix() end )
+kym('n', '<leader>fc', function() require('telescope.builtin').grep_string() end )--cursor
+kym('n', '<leader>fb', function() require('telescope.builtin').buffers() end )
+kym('n', '<leader>fh', function() require('telescope.builtin').help_tags() end )
+kym('n', '<leader>fp', function() require('telescope.builtin').man_pages() end )--pages
+kym('n', '<leader>fo', function() require('telescope.builtin').vim_options() end )
+kym('n', '<leader>fy', function() require('telescope.builtin').registers() end )--yank
+kym('n', '<leader>fk', function() require('telescope.builtin').keymaps() end )
+kym('n', '<leader>fe', function() require('telescope.builtin').diagnostics() end )
 
 --terminal
 vim.keymap.set('t', '<C-Space>', [[<C-\><C-n>]])

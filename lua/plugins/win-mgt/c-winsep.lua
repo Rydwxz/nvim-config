@@ -1,4 +1,4 @@
-return {
+local P = {
 
     "nvim-zh/colorful-winsep.nvim",
 	  opts = {
@@ -7,7 +7,9 @@ return {
       },
       no_exec_files = {
         'NvimTree',
+        'TelescopePrompt',
       },
     },
 
 }
+return {}

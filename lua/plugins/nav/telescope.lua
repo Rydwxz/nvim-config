@@ -6,7 +6,16 @@ return {
 	},
 	opts = {
 		defaults = {
-			path_display = { shorten = 3, },
+			path_display = { shorten = 4, },
+        mappings = {
+              n = {
+            	  ['<c-d>'] = 'delete_buffer',
+              }, -- n
+              i = {
+                ["<C-h>"] = "which_key",
+                ['<c-d>'] = 'delete_buffer',
+              } -- i
+        } -- mappings
 		},
 		pickers = {
 			find_files = {
